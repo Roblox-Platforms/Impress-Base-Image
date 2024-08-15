@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="edenkneale@outlook.com"
 # Install Libraries
 RUN \
     --mount=type=cache,target=/var/cache/apt \
-    apt update -y && apt upgrade -y && apt install -y openssl unoconv libreoffice-dev imagemagick fontconfig unzip wget fonts-liberation
+    apt install -y openssl unoconv libreoffice-dev imagemagick fontconfig unzip wget fonts-liberation
 COPY policy.xml /etc/ImageMagick-6/policy.xml
 
 # Downloading fonts
